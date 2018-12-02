@@ -1,4 +1,4 @@
-# metabolite
+# Bank Details
 ==========================
 
 ## Setting up development environment
