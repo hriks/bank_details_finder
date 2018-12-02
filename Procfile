@@ -1,1 +1,1 @@
-web: gunicorn metabolite.wsgi
+web: gunicorn bank.wsgi

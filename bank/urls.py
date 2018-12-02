@@ -18,9 +18,9 @@ from django.contrib import admin
 from core.views import GetIFSCBankDetails, GetBankDetails
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url(r'^bank/ifsccode/(?P<ifsc_code>[A-Za-z_0-9\-]+)$',
         GetIFSCBankDetails.as_view()),
     url(r'^bank/city/(?P<city>[A-Za-z_0-9\-]+)$',
         GetBankDetails.as_view()),
+    url(r'^', admin.site.urls),
 ]
