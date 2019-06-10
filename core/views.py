@@ -21,9 +21,10 @@ class GetBankDetails(generics.ListAPIView):
     search_fields = ['bank_name']
 
     def get_queryset(self):
-        queryset = Bank.objects.filter(
-            city__icontains=self.kwargs.get('city')
-        )
+        queryset = Bank.objects.all()
+        #queryset = Bank.objects.filter(
+        #    city__icontains=self.kwargs.get('city')
+        #)
         if "bank_name" in self.request.query_params:
             queryset = queryset.filter(
                 bank_name__icontains=self.request.query_params['bank_name'])
